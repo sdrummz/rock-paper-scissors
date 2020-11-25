@@ -4,55 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script>
-      function computerSelection() {
-        let choiceArr = ['rock', 'paper', 'scissors'];
-        let choice = Math.floor(Math.random() * 3);
-        return choiceArr[choice];
-      }
-
-      let myScore = 0;
-      let computerScore = 0;
-      function playRound(playerSelection, computerSelection) {
-        if (playerSelection === computerSelection) {
-          return "It's a tie!";
-        } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-          computerScore++;
-          return 'You Lose! Paper beats Rock';
-        } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-          myScore++;
-          return 'You Win! Rock beats Scissors';
-        } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-          myScore++;
-          return 'You Win! Paper beats Rock';
-        } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-          computerScore++;
-          return 'You Lose! Scissors beats paper';
-        } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-          computerScore++;
-          return 'You Lose! Rock beats Scissors';
-        } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-          myScore++;
-          return 'You Win! Scissors beats Paper';
-        }
-      }
-
-      function game() {
-        for (let i = 0; i < 5; i++) {
-          let playerSelection = prompt('Choose rock, paper, or scissors').toLowerCase();
-          console.log(playRound(playerSelection, computerSelection()));
-          console.log('Your Score: ' + myScore + ' Computer Score: ' + computerScore);
-        }
-        if (myScore > computerScore) {
-          console.log('You win ' + myScore + ' rounds to ' + computerScore);
-        } else if (computerScore > myScore) {
-          console.log('You lose ' + computerScore + ' rounds to ' + myScore);
-        } else if (computerScore === myScore) {
-          console.log('You tied ' + computerScore + ' rounds to ' + myScore);
-        }
-      }
-    </script>
+    <div class="container">
+      <div class="scorecard">
+        <h1>Player 1: 0</h1>
+        <h1>Draw: 0</h1>
+        <h1>Computer: 0</h1>
+      </div>
+      <div class="description">
+        <p>Rock Paper Scissors: First Player to 5 rounds wins!</p>
+      </div>
+      <div class="button-section">
+        <div>
+          <img class="rock-img" src="images/icons8-rock-96.png" alt="" />
+          <h3>Rock</h3>
+        </div>
+        <div>
+          <img class="paper-img" src="images/icons8-paper-128.png" alt="" />
+          <h3>Paper</h3>
+        </div>
+        <div>
+          <img class="scissors-img" src="images/icons8-scissors-200.png" alt="" />
+          <h3>Scissors</h3>
+        </div>
+      </div>
+      <div class="text-section">
+        <h2>Choose Rock, Paper, or Scissors to begin...</h2>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

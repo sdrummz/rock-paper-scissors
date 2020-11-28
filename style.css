@@ -11,7 +11,7 @@ body {
 
 .container {
   min-width: 800px;
-  background-color: rgba(12, 24, 54, 0.8);
+  background-color: rgba(12, 24, 54, 0.85);
   height: 500px;
 }
 
@@ -51,11 +51,27 @@ img {
 }
 
 img:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 .text-section {
+  position: relative;
   text-align: center;
-  padding: 20px;
+  font-size: 40px;
   color: white;
+}
+
+.new-game-btn {
+  position: relative;
+  margin-left: 50px;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(12, 24, 54);
+  color: white;
+  font-size: 15px;
+  border: none;
+}
+
+.new-game-btn:hover {
+  border: 1px solid white;
 }

@@ -12,7 +12,7 @@ body {
 .container {
   min-width: 800px;
   background-color: rgba(12, 24, 54, 0.85);
-  height: 500px;
+  height: 525px;
 }
 
 .scorecard {

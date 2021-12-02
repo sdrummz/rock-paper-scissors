@@ -6,4 +6,4 @@ Are you impressed? I would guess no...
 
 # Live Demo
 
-https://szglabs.github.io/rock-paper-scissors/
+https://sdrummz.github.io/rock-paper-scissors/
